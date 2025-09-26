@@ -19,10 +19,51 @@ header { background:#222; color:#fff; display:flex; justify-content:space-betwee
 .dropdown-content a { display:block; padding:10px; text-decoration:none; color:#000; }
 .dropdown-content a:hover { background:#f1f1f1; }
 
-/* Hero */
-.hero { background:#f5f5f5; text-align:center; padding:80px 20px; }
-.hero h1 { font-size:2.5rem; margin-bottom:15px; }
-.hero p { font-size:1.2rem; }
+/* Hero Section with Slideshow */
+.hero {
+  position: relative;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Slideshow background */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: heroSlideshow 20s infinite;
+  z-index: -1;
+}
+
+/* Text styling */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+.hero p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+/* Keyframes for slideshow with PNGs */
+@keyframes heroSlideshow {
+  0%   { background-image: url("../images/hero1.png"); }
+  25%  { background-image: url("../images/hero2.png"); }
+  50%  { background-image: url("../images/hero3.png"); }
+  75%  { background-image: url("../images/hero4.png"); }
+  100% { background-image: url("../images/hero1.png"); }
+}
 
 /* Sections */
 .section { padding:60px 20px; }
