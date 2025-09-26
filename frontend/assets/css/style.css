@@ -19,7 +19,7 @@ header { background:#222; color:#fff; display:flex; justify-content:space-betwee
 .dropdown-content a { display:block; padding:10px; text-decoration:none; color:#000; }
 .dropdown-content a:hover { background:#f1f1f1; }
 
-/* Hero Section with Fade Slideshow */
+/* Hero Section with Slideshow */
 .hero {
   position: relative;
   height: 100vh; /* Full screen height */
@@ -32,6 +32,19 @@ header { background:#222; color:#fff; display:flex; justify-content:space-betwee
   overflow: hidden;
 }
 
+/* Slideshow background */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: heroSlideshow 20s infinite;
+  z-index: -1;
+}
+
+/* Text styling */
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 15px;
@@ -43,60 +56,13 @@ header { background:#222; color:#fff; display:flex; justify-content:space-betwee
   text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
 }
 
-/* Background layers */
-.hero::before,
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  animation: fadeSlideshow 20s infinite;
-  z-index: -1;
-}
-
-.hero::before {
-  background-image: url("../images/hero1.png");
-  animation-delay: 0s;
-}
-.hero::after {
-  background-image: url("../images/hero2.png");
-  animation-delay: 5s;
-}
-
-/* Extra keyframes with multiple images */
-@keyframes fadeSlideshow {
-  0%   { opacity: 1; }
-  20%  { opacity: 1; }
-  25%  { opacity: 0; }
-  95%  { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-/* More images stacked using pseudo-elements trick */
-.hero::before {
-  animation-name: fade1;
-}
-.hero::after {
-  animation-name: fade2;
-}
-
-@keyframes fade1 {
-  0%, 20%   { opacity: 1; background-image: url("../images/hero1.png"); }
-  25%, 45%  { opacity: 1; background-image: url("../images/hero2.png"); }
-  50%, 70%  { opacity: 1; background-image: url("../images/hero3.png"); }
-  75%, 95%  { opacity: 1; background-image: url("../images/hero4.png"); }
-  100%      { opacity: 1; background-image: url("../images/hero1.png"); }
-}
-
-@keyframes fade2 {
-  0%, 20%   { opacity: 0; }
-  25%, 45%  { opacity: 1; }
-  50%, 70%  { opacity: 0; }
-  75%, 95%  { opacity: 1; }
-  100%      { opacity: 0; }
+/* Keyframes for slideshow with PNGs */
+@keyframes heroSlideshow {
+  0%   { background-image: url("../images/hero1.png"); }
+  25%  { background-image: url("../images/hero2.png"); }
+  50%  { background-image: url("../images/hero3.png"); }
+  75%  { background-image: url("../images/hero4.png"); }
+  100% { background-image: url("../images/hero1.png"); }
 }
 
 /* Sections */
