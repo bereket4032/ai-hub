@@ -40,34 +40,45 @@ body{font-family:'Poppins',system-ui,Segoe UI,Arial; color:#111; line-height:1.5
 .hamburger-panel{position:absolute; right:20px; top:64px; background:#fff; color:#111; padding:12px; box-shadow:0 8px 20px rgba(0,0,0,0.12); border-radius:8px; display:none}
 .hamburger-panel a{display:block; color:#111; padding:8px 6px; text-decoration:none}
 
-/* =============== Hero =============== */
-.hero{position:relative; height:78vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; overflow:hidden}
-.hero-overlay{
-  position:absolute; inset:0; background:linear-gradient(180deg, rgba(2,6,23,0.5), rgba(2,6,23,0.55)); z-index:0;
+/* Hero Section with Background Slideshow */
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
 }
 
-/* Background crossfade layers (3 layers for smoother transitions) */
-.hero::before,
-.hero::after,
-.hero .hero-bg-layer {
-  content:""; position:absolute; inset:0; background-size:cover; background-position:center; background-repeat:no-repeat; z-index:-1; opacity:0; transition:1s ease-in-out;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: heroSlider 15s infinite;
+  z-index: -1;
+  opacity: 0.85;
 }
 
-/* We'll use inline background-image on layers via :before / :after and an inner element */
-.hero::before{background-image:url("assets/images/hero1.png"); opacity:1}
-.hero .hero-bg-layer{background-image:url("assets/images/hero2.png"); opacity:0}
-.hero::after{background-image:url("assets/images/hero3.png"); opacity:0}
+@keyframes heroSlider {
+  0%, 33%   { background-image: url('assets/images/case1.png'); }
+  34%, 66%  { background-image: url('assets/images/case2.png'); }
+  67%, 100% { background-image: url('assets/images/app-sample1.png'); }
+}
 
-/* We'll animate opacity with JS (simple crossfade loop). */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
 
-/* Hero content */
-.hero-content{position:relative; z-index:2; max-width:1000px; padding:20px}
-.hero h1{font-size:2.6rem; margin-bottom:12px; text-shadow:0 6px 18px rgba(0,0,0,0.45)}
-.hero p{font-size:1.1rem; color:#eef2ff; margin-bottom:18px; text-shadow:0 4px 14px rgba(0,0,0,0.35)}
-.hero-cta{display:flex; gap:12px; justify-content:center}
-.btn{display:inline-block; padding:10px 14px; border-radius:8px; text-decoration:none; color:#111; background:#fff; font-weight:600}
-.btn-primary{background:var(--accent); color:#fff}
-.btn-outline{background:transparent; border:1px solid rgba(255,255,255,0.15); color:#fff}
+.hero p {
+  font-size: 1.4rem;
+  max-width: 700px;
+}
 
 /* =============== Section =============== */
 .section{padding:64px 0}
