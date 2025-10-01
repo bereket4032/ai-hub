@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Beki AI Hub</title>
 
-  <!-- Google font (optional) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/script.js" defer></script>
 </head>
@@ -15,189 +13,127 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo-link" href="index.html">
-        <img src="assets/images/logo.png" alt="Beki AI Hub Logo" class="logo"/>
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="Beki AI Hub Logo" />
       </a>
 
-      <nav class="main-nav" aria-label="Main navigation">
+      <nav class="main-nav">
         <ul class="nav-list">
           <li><a href="#hero" class="nav-link active">Home</a></li>
-
-          <!-- Services with hover preview -->
-          <li class="nav-item has-preview">
-            <a href="#services" class="nav-link">Services</a>
-            <div class="preview-panel" aria-hidden="true">
-              <ul>
-                <li><strong>AI with Beki (Chatbot)</strong><br/><small>Interactive assistant & chatbot</small></li>
-                <li><strong>AI Analytics</strong><br/><small>Business insights & dashboards</small></li>
-                <li><strong>AI Image Generator</strong><br/><small>Design & creative assets</small></li>
-              </ul>
-            </div>
-          </li>
-
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
           <li><a href="#solutions" class="nav-link">Solutions</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="header-tools">
-        <form class="search-form" role="search" onsubmit="return false;">
-          <input type="search" placeholder="Search apps..." id="search-input" />
-        </form>
-
-        <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
-
-        <div id="hamburger-panel" class="hamburger-panel" aria-hidden="true">
-          <a href="login.html">Log in</a>
-          <a href="signup.html">Sign up</a>
-          <a href="settings.html">Settings</a>
-          <a href="about.html">About us</a>
-          <a href="https://wa.me/48780502904" target="_blank">WhatsApp: +48 780 502 904</a>
-          <a href="tel:+251911982197">Call: +251 911 982197</a>
-          <a href="mailto:bereketendalebekel@gmail.com">Email: bereketendalebekel@gmail.com</a>
-        </div>
+      <button id="hamburger" class="hamburger">☰</button>
+      <div id="hamburger-panel" class="hamburger-panel">
+        <a href="login.html">Log in</a>
+        <a href="signup.html">Sign up</a>
+        <a href="settings.html">Settings</a>
+        <a href="about.html">About us</a>
+        <a href="https://wa.me/48780502904" target="_blank">WhatsApp</a>
+        <a href="tel:+251911982197">Call</a>
+        <a href="mailto:bereketendalebekel@gmail.com">Email</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>Welcome to Beki AI Hub</h1>
-    <p>Your central hub for powerful AI applications that solve real-world problems.</p>
-    <div class="hero-cta">
-      <a href="#services" class="btn btn-primary">Explore Services</a>
-      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to Beki AI Hub</h1>
+      <p>Your central hub for powerful AI applications that solve real-world problems.</p>
+      <div class="hero-cta">
+        <a href="#services" class="btn btn-primary">Explore Services</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our AI Applications</h2>
+      <p class="lede">Click any app to open it or learn more.</p>
+      <div class="apps-grid">
+        <article class="app-card">
+          <img src="assets/images/app-beki.png" alt="AI with Beki" />
+          <h3>AI with Beki</h3>
+          <p>Smart conversational assistant.</p>
+          <a class="btn btn-primary" href="https://ai-project-977z.vercel.app/" target="_blank">Open App</a>
+        </article>
+        <article class="app-card">
+          <img src="assets/images/app-sample1.png" alt="AI Analytics" />
+          <h3>AI Analytics</h3>
+          <p>Business insights & dashboards (coming soon).</p>
+        </article>
+        <article class="app-card">
+          <img src="assets/images/app-sample2.png" alt="AI Image Maker" />
+          <h3>AI Image Maker</h3>
+          <p>Generate images & creative assets.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-
-    <!-- Services (apps gallery) -->
-    <section id="services" class="section">
-      <div class="container">
-        <h2>Our AI Applications</h2>
-        <p class="lede">Click any app to open it (external link) or learn more.</p>
-
-        <div class="apps-grid">
-          <!-- Card template. Replace href with the real app URL -->
-          <article class="app-card">
-            <img src="assets/images/app-beki.png" alt="AI with Beki" class="app-thumb" />
-            <h3>AI with Beki</h3>
-            <p>Smart conversational assistant.</p>
-            <div class="card-actions">
-              <a class="btn" href="https://ai-project-977z.vercel.app/" target="_blank" rel="noopener">Open app</a>
-              <a class="btn btn-outline" href="services.html#beki">Details</a>
-            </div>
-          </article>
-
-          <article class="app-card">
-            <img src="assets/images/app-sample1.png" alt="AI Analytics" class="app-thumb" />
-            <h3>AI Analytics</h3>
-            <p>Business analytics & insights (coming soon).</p>
-            <div class="card-actions">
-              <a class="btn btn-outline" href="services.html#analytics">Details</a>
-            </div>
-          </article>
-
-          <article class="app-card">
-            <img src="assets/images/app-sample2.png" alt="AI Images" class="app-thumb" />
-            <h3>AI Image Maker</h3>
-            <p>Generate images & assets quickly.</p>
-            <div class="card-actions">
-              <a class="btn btn-outline" href="services.html#images">Details</a>
-            </div>
-          </article>
-
-          <!-- add more cards in the same pattern -->
+  <!-- Case Studies -->
+  <section id="case-studies" class="section">
+    <div class="container">
+      <h2>Case Studies</h2>
+      <div class="cases-grid">
+        <div class="case-card">
+          <img src="assets/images/case1.png" alt="Case 1">
+          <h4>Smart IoT Monitoring</h4>
+          <p>Reduced downtime for industrial client.</p>
+        </div>
+        <div class="case-card">
+          <img src="assets/images/case2.png" alt="Case 2">
+          <h4>Customer Support Automation</h4>
+          <p>Automated responses reduced SLA times by 50%.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Case studies -->
-    <section id="case-studies" class="section">
-      <div class="container">
-        <h2>Case Studies</h2>
-        <div class="cases-grid">
-          <div class="case-card">
-            <img src="assets/images/case1.png" alt="Case 1" />
-            <h4>Smart IoT Monitoring</h4>
-            <p>Applied AI to reduce downtime for an industrial client.</p>
-          </div>
-          <div class="case-card">
-            <img src="assets/images/case2.png" alt="Case 2" />
-            <h4>Customer Support Automation</h4>
-            <p>Automated responses reduced SLA times by 50%.</p>
-          </div>
+  <!-- Solutions -->
+  <section id="solutions" class="section">
+    <div class="container">
+      <h2>Solutions</h2>
+      <p>We deliver tailored AI solutions: automation, security, analytics, and custom integrations.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <p>Beki AI Hub designs pragmatic AI tools that help people and businesses succeed.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send Message</button>
         </div>
-      </div>
-    </section>
+      </form>
+    </div>
+  </section>
 
-    <!-- Solutions -->
-    <section id="solutions" class="section">
-      <div class="container">
-        <h2>Solutions</h2>
-        <p>We deliver tailored AI solutions: automation, security, analytics, and custom integrations.</p>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Beki AI Hub</h2>
-        <p>We design pragmatic AI tools that help people and businesses succeed.</p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Send us a quick message and we'll reply.</p>
-
-        <form id="contact-form" class="contact-form" novalidate>
-          <div class="row">
-            <label>
-              Name
-              <input name="name" id="contact-name" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" id="contact-email" required />
-            </label>
-          </div>
-          <label>
-            Message
-            <textarea name="message" id="contact-message" rows="5" required></textarea>
-          </label>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Send Message</button>
-            <span id="contact-status" class="form-status" aria-live="polite"></span>
-          </div>
-        </form>
-
-        <div class="contact-info">
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/48780502904" target="_blank">+48 780 502 904</a></p>
-          <p><strong>Phone (local):</strong> <a href="tel:+251911982197">+251 911 982197</a></p>
-          <p><strong>Email:</strong> <a href="mailto:bereketendalebekel@gmail.com">bereketendalebekel@gmail.com</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-row">
-        <div>© 2025 Beki AI Hub</div>
-        <div class="footer-links">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-        </div>
-      </div>
+      <p>© 2025 Beki AI Hub | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
     </div>
   </footer>
 </body>
