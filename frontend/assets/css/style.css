@@ -392,3 +392,155 @@ body {
     padding: 14px;
   }
 }
+
+/* ======== FINAL RESPONSIVE FIX (Mobile + Tablet + Zoom Out) ======== */
+
+/* Ensure body never overflows */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix main sections to fit any viewport */
+section {
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Adjust container for smaller screens */
+@media (max-width: 992px) {
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 70vh;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .apps-grid,
+  .cases-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* Mobile-friendly layout (phones ≤768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 60vh;
+    padding: 40px 14px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Make each app/card full-width */
+  .apps-grid,
+  .cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Fix About & Contact visibility */
+  #about, #contact {
+    padding: 50px 14px;
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: 14px;
+    width: 100%;
+  }
+
+  .contact-form .row {
+    flex-direction: column;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+  }
+
+  /* Ensure footer is visible */
+  .site-footer {
+    padding: 24px 0;
+    text-align: center;
+  }
+
+  /* Handle nav menu on small devices */
+  .nav-list {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Very small devices (≤480px) */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .contact-form {
+    padding: 12px;
+  }
+
+  #about p, #contact p {
+    font-size: 0.9rem;
+  }
+}
