@@ -621,3 +621,75 @@ section {
     flex-wrap: nowrap;
   }
 }
+
+/* === FINAL FIX: Hamburger + Mobile Menu Visibility === */
+
+/* Base hamburger button */
+.hamburger {
+  display: none; /* hidden on desktop by default */
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* Make sure header layout supports it */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Fix mobile menu visibility */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 15px;
+  background: #111;
+  color: #fff;
+  width: 240px;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  flex-direction: column;
+  z-index: 10000;
+}
+
+/* Make it show properly */
+.mobile-menu.active {
+  display: flex !important;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile layout rules */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* hide desktop nav */
+  }
+  .hamburger {
+    display: block; /* show hamburger */
+    margin-right: 10px;
+  }
+  .mobile-menu {
+    width: 80%;
+    right: 10%;
+    top: 70px;
+  }
+  .mobile-menu a {
+    text-align: center;
+    padding: 14px 0;
+  }
+}

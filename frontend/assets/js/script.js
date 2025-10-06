@@ -2,15 +2,35 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Mobile menu toggle ---------- */
-  const hb = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobile-menu");
+const hb = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobile-menu");
 
-  if (hb && mobileMenu) {
-    hb.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const shown = mobileMenu.style.display === "flex";
-      mobileMenu.style.display = shown ? "none" : "flex";
+if (hb && mobileMenu) {
+  hb.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileMenu.classList.toggle("active");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !hb.contains(e.target)) {
+      mobileMenu.classList.remove("active");
+    }
+  });
+
+  // Smooth scroll + close when link clicked
+  mobileMenu.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        mobileMenu.classList.remove("active");
+      }
     });
+  });
+}
+
 
     // Close menu when clicking outside
     document.addEventListener("click", (e) => {
