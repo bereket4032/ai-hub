@@ -105,15 +105,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// ======== Mobile Menu Toggle ========
-document.addEventListener("DOMContentLoaded", function() {
-  const hamburger = document.getElementById("hamburger");
-  const navList = document.getElementById("mainNav");
 
-  if (hamburger && navList) {
-    hamburger.addEventListener("click", () => {
-      navList.classList.toggle("open");
-      hamburger.classList.toggle("active");
-    });
-  }
-});
