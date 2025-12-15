@@ -104,3 +104,40 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+// Contact form submission
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.querySelector("#name").value.trim();
+    const email = document.querySelector("#email").value.trim();
+    const message = document.querySelector("#message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("⚠️ Please fill in all fields.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("✅ Message sent successfully!");
+        contactForm.reset();
+      } else {
+        alert("❌ Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error sending contact message:", error);
+      alert("❌ Failed to send message. Please check your connection.");
+    }
+  });
+}
