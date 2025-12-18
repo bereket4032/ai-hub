@@ -578,3 +578,69 @@ section {
 .hamburger-panel a:last-child {
   border-bottom: none;
 }
+
+/* ===== DROPDOWN NAVIGATION (CORPORATE) ===== */
+
+.nav-item {
+  position: relative;
+}
+
+.arrow {
+  font-size: 0.7rem;
+  margin-left: 4px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #ffffff;
+  min-width: 220px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 2000;
+}
+
+/* Dropdown items */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 16px;
+  color: #111;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+/* Show dropdown on hover (desktop) */
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ===== MOBILE HANDLING ===== */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+  }
+
+  .nav-item.open .dropdown-menu {
+    display: block;
+  }
+}

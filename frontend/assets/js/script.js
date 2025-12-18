@@ -141,3 +141,12 @@ if (contactForm) {
     }
   });
 }
+
+document.querySelectorAll(".dropdown > a").forEach(item => {
+  item.addEventListener("click", e => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      item.parentElement.classList.toggle("open");
+    }
+  });
+});

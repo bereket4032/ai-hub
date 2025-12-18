@@ -24,15 +24,67 @@
 
     <!-- Navigation -->
     <nav class="main-nav">
-      <ul class="nav-list">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="company-profile.html" class="nav-link">Company</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="solutions.html" class="nav-link">Digital Systems</a></li>
-        <li><a href="#case-studies" class="nav-link">Projects</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+  <ul class="nav-list">
+
+    <li class="nav-item dropdown">
+      <a href="#company" class="nav-link">
+        Company <span class="arrow">▾</span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#company">Company Profile</a></li>
+        <li><a href="#management">Management</a></li>
+        <li><a href="#hse">HSE Policy</a></li>
       </ul>
-    </nav>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a href="#services" class="nav-link">
+        Services <span class="arrow">▾</span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#services">Electromechanical Works</a></li>
+        <li><a href="#services">HVAC Systems</a></li>
+        <li><a href="#services">Electrical Installation</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a href="#digital" class="nav-link">
+        Digital Systems <span class="arrow">▾</span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#digital">Smart Home (IoT)</a></li>
+        <li><a href="#digital">Industrial Automation</a></li>
+        <li><a href="#digital">AI & Software</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a href="#case-studies" class="nav-link">
+        Projects <span class="arrow">▾</span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#case-studies">Completed Projects</a></li>
+        <li><a href="#case-studies">Ongoing Works</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a href="#about" class="nav-link">
+        About <span class="arrow">▾</span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#about">Vision & Mission</a></li>
+        <li><a href="#about">Core Values</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a href="#contact" class="nav-link">Contact</a>
+    </li>
+
+  </ul>
+</nav>
 
     <!-- Mobile Hamburger -->
     <button id="hamburger" class="hamburger">☰</button>
@@ -50,151 +102,152 @@
   </div>
 </header>
 
-  <!-- ================= HERO ================= -->
-  <section id="hero" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>
-        Building Smart Infrastructure & Digital Systems<br>
-        for the Future
-      </h1>
-      <p>
-        We integrate electromechanical engineering with digital intelligence —
-        delivering smart homes, industrial automation, AI platforms, and secure
-        IT systems for enterprises and institutions.
-      </p>
+ <!-- ================= HERO ================= -->
+<section id="hero" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>
+      Electromechanical & Digital Systems<br>
+      Engineering the Future of Smart Infrastructure
+    </h1>
+    <p>
+      We deliver integrated electromechanical, automation, and digital solutions —
+      combining engineering excellence with smart technologies to support
+      industries, institutions, and national infrastructure.
+    </p>
 
-      <div class="hero-cta">
-        <a href="#divisions" class="btn btn-primary">Explore Our Divisions</a>
-        <a href="#contact" class="btn btn-outline">Partner With Us</a>
+    <div class="hero-cta">
+      <a href="#divisions" class="btn btn-primary">Explore Our Divisions</a>
+      <a href="#contact" class="btn btn-outline">Contact Our Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIVISIONS ================= -->
+<section id="divisions" class="section">
+  <div class="container">
+    <h2>Our Divisions</h2>
+    <p class="lede">
+      Integrated engineering and digital capabilities under one professional PLC.
+    </p>
+
+    <div class="apps-grid">
+
+      <!-- Electromechanical Division -->
+      <div class="app-card">
+        <img src="assets/images/app-sample1.png" alt="Electromechanical Systems">
+        <h3>Electromechanical Systems</h3>
+        <p>
+          Electrical installation, HVAC, industrial mechanical systems,
+          power distribution, and long-term maintenance services.
+        </p>
+      </div>
+
+      <!-- Smart Systems / IoT -->
+      <div class="app-card">
+        <img src="assets/images/app-sample2.png" alt="Smart Systems and IoT">
+        <h3>Smart Systems & IoT</h3>
+        <p>
+          Smart homes, building automation, sensor-based monitoring,
+          remote control systems, and intelligent infrastructure solutions.
+        </p>
+      </div>
+
+      <!-- Digital Systems / AI -->
+      <a href="https://ai-project-977z.vercel.app/" target="_blank" class="app-card">
+        <img src="assets/images/app-beki.png" alt="Digital Systems and AI">
+        <h3>Digital Systems & AI</h3>
+        <p>
+          Software platforms, artificial intelligence, data analytics,
+          cybersecurity, and digital transformation for enterprises.
+        </p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS / CASE STUDIES ================= -->
+<section id="case-studies" class="section">
+  <div class="container">
+    <h2>Projects & Use Cases</h2>
+
+    <div class="cases-grid">
+      <div class="case-card">
+        <img src="assets/images/case1.png" alt="Industrial Monitoring System">
+        <h4>Industrial Smart Monitoring</h4>
+        <p>
+          Deployment of sensor-based monitoring systems to improve
+          operational efficiency, safety, and preventive maintenance.
+        </p>
+      </div>
+
+      <div class="case-card">
+        <img src="assets/images/case2.png" alt="AI Automation System">
+        <h4>AI-Enabled Automation</h4>
+        <p>
+          Intelligent automation solutions supporting analytics,
+          operational decision-making, and digital process optimization.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ================= DIVISIONS ================= -->
-  <section id="divisions" class="section">
-    <div class="container">
-      <h2>Our Divisions</h2>
-      <p class="lede">
-        Multidisciplinary engineering and digital solutions under one PLC.
-      </p>
+<!-- ================= SOLUTIONS ================= -->
+<section id="solutions" class="section">
+  <div class="container">
+    <h2>Our Solutions</h2>
+    <p class="lede">
+      Comprehensive solutions from engineering design to digital deployment.
+    </p>
 
-      <div class="apps-grid">
+    <p style="text-align:center;">
+      Electrical & mechanical installation • HVAC systems •
+      Smart buildings • IoT & automation •
+      AI & data analytics • Cybersecurity •
+      Custom software development •
+      System integration & technical consulting
+    </p>
+  </div>
+</section>
 
-        <!-- Electromechanical Division -->
-        <div class="app-card">
-          <img src="assets/images/app-sample1.png" alt="Electromechanical Systems">
-          <h3>Electromechanical Systems</h3>
-          <p>
-            Electrical installation, industrial mechanical systems,
-            maintenance, and infrastructure deployment.
-          </p>
-        </div>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Electromechanical & Digital Systems PLC</h2>
+    <p>
+      Electromechanical & Digital Systems PLC is a multidisciplinary engineering
+      company delivering professional electromechanical and digital solutions
+      across Ethiopia.
+    </p>
 
-        <!-- Smart Systems / IoT -->
-        <div class="app-card">
-          <img src="assets/images/app-sample2.png" alt="Smart Systems & IoT">
-          <h3>Smart Systems & IoT</h3>
-          <p>
-            Smart homes, sensor-based monitoring, remote control,
-            and intelligent automation solutions.
-          </p>
-        </div>
+    <p>
+      We bridge traditional engineering with modern technologies such as
+      automation, IoT, and artificial intelligence to support government,
+      industrial, and commercial projects with reliability and innovation.
+    </p>
+  </div>
+</section>
 
-        <!-- Digital Systems / AI -->
-        <a href="https://ai-project-977z.vercel.app/" target="_blank" class="app-card">
-          <img src="assets/images/app-beki.png" alt="Digital Systems & AI">
-          <h3>Digital Systems & AI</h3>
-          <p>
-            AI platforms, analytics, cybersecurity, software systems,
-            and digital transformation services.
-          </p>
-        </a>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
 
-      </div>
-    </div>
-  </section>
+  <form id="contact-form" class="contact-form">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Your Full Name" required />
 
-  <!-- ================= PROJECTS / CASE STUDIES ================= -->
-  <section id="case-studies" class="section">
-    <div class="container">
-      <h2>Selected Projects & Use Cases</h2>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="Your Email Address" required />
 
-      <div class="cases-grid">
-        <div class="case-card">
-          <img src="assets/images/case1.png" alt="Industrial Monitoring">
-          <h4>Industrial Smart Monitoring</h4>
-          <p>
-            Sensor-based monitoring systems reducing downtime
-            and improving operational efficiency.
-          </p>
-        </div>
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Describe your project or inquiry" required></textarea>
 
-        <div class="case-card">
-          <img src="assets/images/case2.png" alt="AI Automation">
-          <h4>AI-Driven Automation</h4>
-          <p>
-            Intelligent automation for customer support,
-            analytics, and operational decision-making.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <button type="submit">Submit Inquiry</button>
+  </form>
+</section>
 
-  <!-- ================= SOLUTIONS ================= -->
-  <section id="solutions" class="section">
-    <div class="container">
-      <h2>Our Solutions</h2>
-      <p class="lede">
-        End-to-end engineering and digital solutions for enterprises,
-        institutions, and large-scale infrastructure.
-      </p>
-
-      <p style="text-align:center;">
-        Electrical & mechanical installation • Smart infrastructure •
-        IoT & automation • AI & data analytics • Cybersecurity •
-        Custom software systems • System integration & consulting
-      </p>
-    </div>
-  </section>
-
-  <!-- ================= ABOUT ================= -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Electromechanical & Digital Systems PLC</h2>
-      <p>
-        Electromechanical & Digital Systems PLC is a multidisciplinary company
-        focused on delivering modern engineering and digital solutions.
-        We bridge traditional electromechanical systems with advanced
-        information technology, artificial intelligence, and IoT.
-      </p>
-
-      <p>
-        Our mission is to support national infrastructure, enterprises,
-        and institutions through innovation, reliability, and secure
-        technology integration.
-      </p>
-    </div>
-  </section>
-
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-
-    <form id="contact-form" class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Your Name" required />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Your Email" required />
-
-      <label for="message">Message</label>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
