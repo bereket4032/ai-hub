@@ -644,3 +644,37 @@ section {
     display: block;
   }
 }
+
+/* Dropdown base */
+.dropdown {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 220px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+/* Desktop hover */
+@media (min-width: 769px) {
+  .has-dropdown:hover .dropdown {
+    display: block;
+  }
+}
+
+/* Mobile dropdown default */
+@media (max-width: 768px) {
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+}
+
+.has-dropdown .arrow {
+  transition: transform 0.3s ease;
+}
+
+.has-dropdown.open .arrow {
+  transform: rotate(180deg);
+}

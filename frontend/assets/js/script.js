@@ -150,3 +150,38 @@ document.querySelectorAll(".dropdown > a").forEach(item => {
     }
   });
 });
+
+/* ================= MOBILE DROPDOWN FIX ================= */
+
+document.querySelectorAll('.has-dropdown > .nav-link').forEach(link => {
+  link.addEventListener('click', function (e) {
+
+    // Mobile only
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+
+      const parent = this.parentElement;
+      const dropdown = parent.querySelector('.dropdown');
+
+      // Close other open dropdowns
+      document.querySelectorAll('.has-dropdown').forEach(item => {
+        if (item !== parent) {
+          item.classList.remove('open');
+          const d = item.querySelector('.dropdown');
+          if (d) d.style.display = 'none';
+        }
+      });
+
+      // Toggle current dropdown
+      const isOpen = parent.classList.contains('open');
+
+      if (isOpen) {
+        parent.classList.remove('open');
+        dropdown.style.display = 'none';
+      } else {
+        parent.classList.add('open');
+        dropdown.style.display = 'block';
+      }
+    }
+  });
+});
