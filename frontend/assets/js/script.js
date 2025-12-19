@@ -185,3 +185,15 @@ document.querySelectorAll('.has-dropdown > .nav-link').forEach(link => {
     }
   });
 });
+
+/* ================= HEADER SHRINK ON SCROLL ================= */
+
+const header = document.getElementById("site-header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 80) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+});
