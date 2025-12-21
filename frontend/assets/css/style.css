@@ -934,3 +934,8 @@ section {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+.app-card.coming-soon {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
