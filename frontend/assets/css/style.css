@@ -939,3 +939,45 @@ section {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+.progress-bar {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.progress-step {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.progress-step.active {
+  background: #0056b3;
+  color: #fff;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.wizard-form label {
+  display: block;
+  margin-top: 15px;
+}
+
+.wizard-form input,
+.wizard-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}

@@ -197,3 +197,37 @@ window.addEventListener("scroll", () => {
     header.classList.remove("shrink");
   }
 });
+
+const steps = document.querySelectorAll(".form-step");
+const nextBtns = document.querySelectorAll(".next-step");
+const prevBtns = document.querySelectorAll(".prev-step");
+const progressSteps = document.querySelectorAll(".progress-step");
+
+let currentStep = 0;
+
+function updateSteps() {
+  steps.forEach((step, i) => {
+    step.classList.toggle("active", i === currentStep);
+    progressSteps[i]?.classList.toggle("active", i <= currentStep);
+  });
+}
+
+nextBtns.forEach(btn =>
+  btn.addEventListener("click", () => {
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      updateSteps();
+    }
+  })
+);
+
+prevBtns.forEach(btn =>
+  btn.addEventListener("click", () => {
+    if (currentStep > 0) {
+      currentStep--;
+      updateSteps();
+    }
+  })
+);
+
+updateSteps();
