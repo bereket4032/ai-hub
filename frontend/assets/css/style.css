@@ -905,3 +905,32 @@ section {
   padding: 4px 10px;
   border-radius: 999px;
 }
+
+* Digital Systems sub-cards */
+.sub-cards {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sub-card {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #111;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sub-card:hover {
+  background: #e2e8f0;
+  transform: translateX(4px);
+}
+
+.sub-card.coming-soon {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
